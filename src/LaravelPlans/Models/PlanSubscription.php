@@ -48,22 +48,18 @@ class PlanSubscription extends Model implements PlanSubscriptionInterface
     ];
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = [
-        'created_at', 'updated_at',
-        'canceled_at', 'trial_ends_at', 'ends_at', 'starts_at'
-    ];
-
-    /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
     protected $casts = [
         'canceled_immediately' => 'boolean',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'canceled_at' => 'datetime',
+        'trial_ends_at' => 'datetime',
+        'ends_at' => 'datetime',
+        'starts_at' => 'datetime',
     ];
 
     /**
